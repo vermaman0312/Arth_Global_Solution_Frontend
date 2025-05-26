@@ -1,0 +1,81 @@
+{
+  "application_title": "Garageek",
+  "language": {
+    "english": "English",
+    "hindi": "Hindi",
+    "nepali": "Nepali"
+  },
+  "public_page": {
+    "navbar": {
+      "home": "Home",
+      "about": "About us",
+      "blog": "Blog",
+      "pricing": "Pricing",
+      "contact": "Contact",
+      "login": "Login",
+      "register": "Register"
+    },
+    "footer": {
+      "title": "Manage your workshop, vehicles, and customers — all in one place.",
+      "description": "Copy right © garageek 2025."
+    }
+  },
+  "login_page": {
+    "title": "Welcome back to Garageek",
+    "description": "Your intelligent garage partner is just a click away. Unlock a seamless experience in service tracking, customer engagement, and garage management.",
+    "licence": "Licence ID:",
+    "licence_placeholder": "CPCYXE1452T9VP16",
+    "email": "Email Address:",
+    "email_placeholder": "example@example.com",
+    "password": "Password:",
+    "password_placeholder": "********",
+    "remmber_me": "Remember me",
+    "forgot_password": "Forgot password?",
+    "btn_login": "Sign in",
+    "dont_have_account": "Don't you have an licence? Click here."
+  },
+  "two_factor_auth_page": {
+    "title": "Two Factor Authentication",
+    "description": "Enter your six digit otp from authenticator application and verify it.",
+    "btn_verify": "Verify OTP"
+  },
+  "forgot_password_page": {
+    "title": "Forgot Password?",
+    "description": "Enter your registered licence and email address below, and we’ll send you instructions to reset your password.",
+    "licence": "Licence ID:",
+    "licence_placeholder": "CPCYXE1452T9VP16",
+    "email": "Email Address:",
+    "email_placeholder": "example@example.com",
+    "btn_request": "Request for new password"
+  },
+  "registration_page": {
+    "title": "Welcome to Garageek",
+    "description": "Your intelligent garage partner is just a click away. Unlock a seamless experience in service tracking, customer engagement, and garage management.",
+    "first_name_title": "First Name:",
+    "first_name_placeholder": "Aman",
+    "middle_name_title": "Middle Name:",
+    "middle_name_placeholder": "",
+    "last_name_title": "Last Name:",
+    "last_name_placeholder": "Verma",
+    "email_address_title": "Email Address:",
+    "email_address_placeholder": "example@example.com",
+    "phone_number_title": "Phone Number:",
+    "phone_number_placeholder": "+910123456789",
+    "alternative_email_address_title": "Alternative Email Address:",
+    "alternative_email_address_placeholder": "example@example.com",
+    "alternative_phone_number_title": "Alternative Phone Number:",
+    "alternative_phone_number_placeholder": "+919876543210",
+    "gender_title": "Gender:",
+    "gender_male": "Male",
+    "gender_female": "Female",
+    "gender_other": "Other",
+    "dateofbirth_title": "Date of Birth:",
+    "dateofbirth_placeholder": "DD/MM/YYYY",
+    "checkBox_1": "I confirm that the information provided is valid and matches the details on my official ID documents.",
+    "checkBox_2": "Lock the all details.",
+    "already_have_account": "All ready have licence? Login here."
+  },
+  "dashboard_page": {},
+  "quotation_page": {},
+  "invoice_page": {}
+}

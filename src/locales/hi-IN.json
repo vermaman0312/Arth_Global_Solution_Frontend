@@ -1,0 +1,55 @@
+{
+  "application_title": "गैरागीक",
+  "language": {
+    "english": "अंग्रेज़ी",
+    "hindi": "हिंदी",
+    "nepali": "नेपाली"
+  },
+  "public_page": {
+    "navbar": {
+      "home": "मुखपृष्ठ",
+      "about": "हमारे बारे में",
+      "blog": "ब्लॉग",
+      "pricing": "मूल्य निर्धारण",
+      "contact": "संपर्क करें",
+      "login": "लॉगिन",
+      "register": "पंजीकरण करें"
+    },
+    "footer": {
+      "title": "अपनी वर्कशॉप, वाहनों और ग्राहकों का प्रबंधन करें — सब कुछ एक ही स्थान पर।",
+      "description": "कॉपीराइट © गाराजीक 2025।"
+    }
+  },
+  "login_page": {
+    "title": "गाराजीक में आपका स्वागत है",
+    "description": "आपका बुद्धिमान गैराज पार्टनर बस एक क्लिक दूर है। सेवा ट्रैकिंग, ग्राहक जुड़ाव और गैराज प्रबंधन का एक सहज अनुभव पाएं।",
+    "licence": "लाइसेंस आईडी:",
+    "licence_placeholder": "CPCYXE1452T9VP16",
+    "email": "ईमेल पता:",
+    "email_placeholder": "उदाहरण@example.com",
+    "password": "पासवर्ड:",
+    "password_placeholder": "********",
+    "remmber_me": "मुझे याद रखें",
+    "forgot_password": "पासवर्ड भूल गए?",
+    "btn_login": "साइन इन करें",
+    "dont_have_account": "क्या आपके पास लाइसेंस नहीं है? यहाँ क्लिक करें।"
+  },
+   "two_factor_auth_page": {
+    "title": "दो-चरणीय प्रमाणीकरण",
+    "description": "ऑथेंटिकेटर एप्लिकेशन से अपना छह अंकों का ओटीपी दर्ज करें और सत्यापन करें।",
+    "btn_verify": "ओटीपी सत्यापित करें"
+  },
+  "forgot_password_page": {
+    "title": "पासवर्ड भूल गए?",
+    "description": "नीचे अपना पंजीकृत लाइसेंस और ईमेल पता दर्ज करें, और हम आपको पासवर्ड रीसेट करने के निर्देश भेजेंगे।",
+    "licence": "लाइसेंस आईडी:",
+    "licence_placeholder": "CPCYXE1452T9VP16",
+    "email": "ईमेल पता:",
+    "email_placeholder": "example@example.com",
+    "btn_request": "नया पासवर्ड प्राप्त करें"
+  },
+  "registration_page": {},
+  "dashboard_page": {},
+  "quotation_page": {},
+  "invoice_page": {}
+}

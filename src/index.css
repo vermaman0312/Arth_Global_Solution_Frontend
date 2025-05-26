@@ -1,0 +1,104 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+/* ======================================================================================= */
+body {
+  margin: 0;
+  background: hsl(var(--background-primary));
+  font-family: 'Poppins', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* hide scrollbar but allow scroll */
+.scrollbar-hidden::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hidden {
+  -ms-overflow-style: none; /* IE + Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+/* ======================================================================================= */
+@layer base {
+  :root {
+    --background-primary: 240, 100%, 5%;
+    --background-secondary: 0 0% 100%;
+    --background-danger: 0, 97.07%, 40.2%;
+    --foreground-primary: 0 0% 100%;
+    --foreground-secondary: 240, 100%, 5%;
+    --foreground-danger: 0, 97.07%, 40.2%;
+
+    --button-background-primary: 238.22, 66.5%, 60.2%;
+    --button-background-warning: 31.96, 100%, 39.02%;
+    --button-background-danger: 0, 97.07%, 40.2%;
+    --button-foreground: 0 0% 100%;
+
+    --input-placeholder-foreground-primary: 215.68, 18.41%, 60.59%;
+    --input-placeholder-foreground-secondary: 215.68, 18.41%, 60.59%;
+    --input-placeholder-foreground-danger: 0, 100%, 40.78%;
+    --input-background-primary: 210, 100%, 98.43%;
+    --input-background-secondary: 210, 100%, 98.43%;
+    --input-background-danger: 0, 100%, 40.78%;
+    --input-border-primary: 228, 21.13%, 86.08%;
+    --input-border-secondary: 228, 21.13%, 86.08%;
+    --input-border-danger: 0, 100%, 40.78%;
+    --input-foreground-primary: 208.5, 17.7%, 44.31%;
+    --input-foreground-secondary: 208.5, 17.7%, 44.31%;
+    --input-foreground-danger: 0, 100%, 40.78%;
+
+    --alertbox-header-background-primary: 210, 100%, 98.43%;;
+    --alertbox-header-background-secondary: 210, 100%, 98.43%;
+    --alertbox-header-background-danger: 0, 100%, 40.78%;
+
+    --card-header-background-primary: 210, 100%, 98.43%;
+    --card-header-background-secondary: 210, 100%, 98.43%;
+    --card-header-background-danger: 0, 100%, 40.78%;
+    --card-background-primary: 210, 100%, 98.43%;
+    --card-background-secondary: 210, 100%, 98.43%;
+    --card-background-danger: 0, 100%, 40.78%;
+    --card-foreground-primary: 208.5, 17.7%, 44.31%;
+    --card-foreground-secondary: 208.5, 17.7%, 44.31%;
+    --card-foreground-danger: 0, 100%, 40.78%;
+
+    --sidebar-background-primary: 0 0% 100%;
+    --sidebar-background-secondary: 0 0% 100%;
+    --sidebar-background-danger: 0 0% 100%;
+    --sidebar-foreground-primary: 208, 18%, 44%;
+    --sidebar-foreground-secondary: 208, 18%, 44%;
+    --sidebar-foreground-danger: 208, 18%, 44%;
+    --sidebar-option-active-background-primary: 0 0% 100%;
+    --sidebar-option-active-background-secondary: 0 0% 100%;
+    --sidebar-option-active-background-danger: 0 0% 100%;
+    --sidebar-option-active-foreground-primary: 208, 18%, 44%;
+    --sidebar-option-active-foreground-secondary: 208, 18%, 44%;
+    --sidebar-option-active-foreground-danger: 208, 18%, 44%;
+    --sidebar-option-hover-background-primary: 0 0% 100%;
+    --sidebar-option-hover-background-secondary: 0 0% 100%;
+    --sidebar-option-hover-background-danger: 0 0% 100%;
+    --sidebar-option-hover-foreground-primary: 208, 18%, 44%;
+    --sidebar-option-hover-foreground-secondary: 208, 18%, 44%;
+    --sidebar-option-hover-foreground-danger: 208, 18%, 44%;
+
+    --navbar-background-primary: 0 0% 100%;
+    --navbar-background-secondary: 0 0% 100%;
+    --navbar-background-danger: 0 0% 100%;
+    --navbar-foreground-primary: 208, 18%, 44%;
+    --navbar-foreground-secondary: 208, 18%, 44%;
+    --navbar-foreground-danger: 208, 18%, 44%;
+  }
+
+  .dark {
+    --background: 0 0% 100%;
+    --sidebar-background: 208, 18%, 44%;
+    --sidebar-foreground: 0 0% 100%;
+    --navbar-background: 208, 18%, 44%;
+    --navbar-foreground: 0 0% 100%;
+  }
+}
