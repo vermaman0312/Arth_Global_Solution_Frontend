@@ -60,6 +60,10 @@ const HomeLayoutTemplate = () => {
           </CustomLabel>
         </div>
       </div>
+      <CustomLabel className="text-center text-foreground-primary font-light">
+        We bridge the gap between business ambition and legal clarity, offering
+        seamless solutions for compliance, finance, and growth.
+      </CustomLabel>
     </div>
   );
 };
