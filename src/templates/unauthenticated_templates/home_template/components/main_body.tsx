@@ -49,10 +49,10 @@ const words = [
 const MainBody = () => {
   return (
     <div className="h-[30rem] bg-black bg-opacity-40 rounded-3xl flex flex-col items-center justify-center gap-8">
-      <div className="w-full md:w-[70%]">
+      <div className="w-full md:w-[70%] px-4 md:px-0">
         <TypewriterEffect words={words} />
       </div>
-      <div className="w-full md:w-[70%] flex items-center justify-center">
+      <div className="w-full md:w-[70%] px-4 md:px-0 flex items-center justify-center">
         <CustomLabel className="text-center text-foreground-primary font-light">
           We bridge the gap between business ambition and legal clarity,
           offering seamless solutions for compliance, finance, and growth.
