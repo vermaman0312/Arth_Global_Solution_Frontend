@@ -8,6 +8,7 @@ import {
 import React, { useRef, useState } from "react";
 import { cn } from "../../utils/cn";
 import { Earth, Menu, X } from "lucide-react";
+import CustomLabel from "../custom_label/component";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -98,13 +99,11 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
         damping: 50,
       }}
       style={{
-        minWidth: "1000px",
+        minWidth: "1100px",
       }}
       className={cn(
         "scrollbar-hidden relative z-[60] mx-auto hidden w-full max-w-7xl flex-row items-center justify-between self-start rounded-full bg-transparent px-4 py-2 lg:flex dark:bg-transparent",
-        visible
-          ? "bg-white/80 dark:bg-neutral-950/80"
-          : "bg-white/80 dark:bg-neutral-950/80",
+        visible ? "bg-[#DAC5A7]" : "bg-[#DAC5A7]",
         className
       )}
     >
@@ -128,14 +127,14 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
         <a
           onMouseEnter={() => setHovered(idx)}
           onClick={onItemClick}
-          className="relative px-4 py-2 text-neutral-600 dark:text-neutral-300"
+          className="relative px-4 py-2 text-foreground-secondary"
           key={`link-${idx}`}
           href={item.link}
         >
           {hovered === idx && (
             <motion.div
               layoutId="hovered"
-              className="absolute inset-0 h-full w-full rounded-full bg-gray-100 dark:bg-neutral-800"
+              className="absolute inset-0 h-full w-full rounded-full bg-gray-400"
             />
           )}
           <span className="relative z-20">{item.name}</span>
@@ -238,10 +237,12 @@ export const NavbarLogo = () => {
       href="#"
       className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black"
     >
-      <Earth className="font-bold text-foreground-secondary dark:text-white" />
-      <span className="font-bold text-foreground-secondary dark:text-white">
-        ARTH GLOBAL SOLUTION
-      </span>
+      <Earth className="md:w-8 md:h-8 font-bold text-foreground-secondary" />
+      <div className="flex flex-col">
+        <CustomLabel className="font-bold text-foreground-secondary md:text-lg">
+          ARTH GLOBAL SOLUTION
+        </CustomLabel>
+      </div>
     </a>
   );
 };

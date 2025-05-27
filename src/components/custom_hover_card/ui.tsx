@@ -69,7 +69,7 @@ export const Card = ({
   return (
     <div
       className={cn(
-        "rounded-2xl h-full w-full p-4 overflow-hidden bg-[#00000066] relative z-20",
+        "rounded-2xl h-full w-full p-4 overflow-hidden bg-gray-700 relative z-20",
         className
       )}
     >
@@ -89,7 +89,7 @@ export const CardTitle = ({
   return (
     <CustomLabel
       className={cn(
-        "text-zinc-100 font-regular text-xl tracking-wide",
+        "text-[#DAC5A7] font-semibold text-xl tracking-wide",
         className
       )}
     >

@@ -1,41 +1,37 @@
 import React from "react";
 import { TypewriterEffect } from "../../../../components/custom_typewriter/component";
 import CustomLabel from "../../../../components/custom_label/component";
+import CustomMovieBorderButton from "../../../../components/custo_moving_border_button/component";
 
 const words = [
   {
-    text: "WHERE",
+    text: "EMPOWERING",
     className: "text-[#DAC5A7] text-2xl md:text-4xl text-center",
   },
   {
-    text: "BUSINESS",
+    text: "GROWTH",
     className: "text-[#DAC5A7] text-2xl md:text-4xl text-center",
-  },
-  {
-    text: "MEETS",
-    className: "text-[#DAC5A7] text-2xl md:text-4xl text-center",
-  },
-  {
-    text: "LEGAL",
-    className: "text-[#DAC5A7] text-2xl md:text-4xl text-center",
-  },
-  {
-    text: "SIMPLICITY",
-    className:
-      "text-blue-500 dark:text-blue-500 text-2xl md:text-4xl text-center",
   },
   {
     text: "WITH",
+    className: "text-[#DAC5A7] text-2xl md:text-4xl text-center",
+  },
+  {
+    text: "SMART,",
+    className: "text-[#DAC5A7] text-2xl md:text-4xl text-center",
+  },
+  {
+    text: "AFFORDABLE,",
     className:
       "text-blue-500 dark:text-blue-500 text-2xl md:text-4xl text-center",
   },
   {
-    text: "ARTH",
+    text: "AND",
     className:
       "text-blue-500 dark:text-blue-500 text-2xl md:text-4xl text-center",
   },
   {
-    text: "GLOBAL",
+    text: "EXPERT",
     className:
       "text-blue-500 dark:text-blue-500 text-2xl md:text-4xl text-center",
   },
@@ -48,15 +44,20 @@ const words = [
 
 const MainBody = () => {
   return (
-    <div className="h-[30rem] bg-black bg-opacity-40 rounded-3xl flex flex-col items-center justify-center gap-8">
+    <div className="h-[30rem] bg-gray-700 bg-opacity-30 rounded-3xl flex flex-col items-center justify-center gap-8">
       <div className="w-full md:w-[70%] px-4 md:px-0">
         <TypewriterEffect words={words} />
       </div>
       <div className="w-full md:w-[70%] px-4 md:px-0 flex items-center justify-center">
         <CustomLabel className="text-center text-foreground-primary font-light">
-          We bridge the gap between business ambition and legal clarity,
-          offering seamless solutions for compliance, finance, and growth.
+          Your trusted partner for NGO, MSME, Compliance, Legal & IT services.
         </CustomLabel>
+      </div>
+      <div className="flex flex-wrap items-center justify-center gap-4">
+        <CustomMovieBorderButton>
+          📞 Book Free Consultation
+        </CustomMovieBorderButton>
+        <CustomMovieBorderButton>💬 WhatsApp Now</CustomMovieBorderButton>
       </div>
     </div>
   );
