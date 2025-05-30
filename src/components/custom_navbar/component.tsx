@@ -1,4 +1,5 @@
 import { BackgroundBeamsWithCollision } from "../custom_body_background/ui";
+import CustomCollapsible from "../custom_collapsible/component";
 import {
   Navbar,
   NavBody,
@@ -19,35 +20,87 @@ type props = {
 const navItems = [
   {
     name: "Home",
-    link: "#home",
+    link: "#",
   },
   {
     name: "About us",
-    link: "#aboutus",
+    link: "#",
   },
   {
-    name: "Funding",
-    link: "#funding",
+    name: "Manage & Grow",
+    link: "#",
+    items: [
+      {
+        name: "About us",
+        link: "#",
+      },
+      {
+        name: "Leadership",
+        link: "#",
+      },
+      {
+        name: "Our Works",
+        link: "#",
+      },
+      {
+        name: "Career",
+        link: "#",
+      },
+      {
+        name: "Funding",
+        link: "#",
+      },
+      {
+        name: "Laws",
+        link: "#",
+      },
+      {
+        name: "News",
+        link: "#",
+      },
+      {
+        name: "Our Services",
+        link: "#",
+      },
+    ],
   },
   {
-    name: "Laws",
-    link: "#laws",
-  },
-  {
-    name: "News",
-    link: "#news",
-  },
-  {
-    name: "Our works",
-    link: "#ourworks",
+    name: "IT & Digital",
+    link: "#",
+    items: [
+      {
+        name: "About us",
+        link: "#",
+      },
+      {
+        name: "Leadership",
+        link: "#",
+      },
+      {
+        name: "Career",
+        link: "#",
+      },
+      {
+        name: "Our Services",
+        link: "#",
+      },
+      {
+        name: "Our Products",
+        link: "#",
+      },
+      {
+        name: "Spotlight",
+        link: "#",
+      },
+    ],
   },
   {
     name: "Blog",
-    link: "#blog",
+    link: "#",
   },
   {
     name: "Contact us",
-    link: "#contactus",
+    link: "#",
   },
 ];
 
@@ -78,14 +131,20 @@ export function CustomNavbar({ ...props }: props) {
             onClose={() => setIsMobileMenuOpen(false)}
           >
             {navItems.map((item, idx) => (
-              <a
-                key={`mobile-link-${idx}`}
-                href={item.link}
-                onClick={() => setIsMobileMenuOpen(false)}
-                className="relative text-neutral-600 dark:text-neutral-300"
-              >
-                <span className="block">{item.name}</span>
-              </a>
+              <>
+                {item.items && item.items?.length > 0 ? (
+                  <CustomCollapsible title={item.name} items={item.items} />
+                ) : (
+                  <a
+                    key={`mobile-link-${idx}`}
+                    href={item.link}
+                    onClick={() => setIsMobileMenuOpen(false)}
+                    className="relative text-foreground-secondary w-full"
+                  >
+                    <span className="block">{item.name}</span>
+                  </a>
+                )}
+              </>
             ))}
             <div className="flex w-full flex-col gap-4">
               <NavbarButton
