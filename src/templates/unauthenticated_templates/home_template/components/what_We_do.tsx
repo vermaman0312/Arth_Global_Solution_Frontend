@@ -1,8 +1,112 @@
 import React from "react";
 import CustomHeroParallex from "../../../../components/custom_hero_parallex/component";
 
+export const products = [
+  {
+    title: "NGO SUPPORT",
+    link: "https://gomoonbeam.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+  },
+  {
+    title: "MSME & STARTUP ASSISTANCE",
+    link: "https://cursor.so",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+  },
+  {
+    title: "LEGAL & COMPLIANCE",
+    link: "https://userogue.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+  },
+
+  {
+    title: "FUNCDING & AUDITING",
+    link: "https://editorially.org",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+  },
+  {
+    title: "IT & DIGITAL SETUP",
+    link: "https://editrix.ai",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+  },
+  {
+    title: "PROJECT EXECUTION & FUNDRAISING",
+    link: "https://app.pixelperfect.quest",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/pixelperfect.png",
+  },
+  {
+    title: "NGO SUPPORT",
+    link: "https://gomoonbeam.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/moonbeam.png",
+  },
+  {
+    title: "MSME & STARTUP ASSISTANCE",
+    link: "https://cursor.so",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+  },
+  {
+    title: "LEGAL & COMPLIANCE",
+    link: "https://userogue.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+  },
+
+  {
+    title: "FUNCDING & AUDITING",
+    link: "https://editorially.org",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+  },
+  {
+    title: "IT & DIGITAL SETUP",
+    link: "https://editrix.ai",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+  },
+  {
+    title: "FUNCDING & AUDITING",
+    link: "https://editorially.org",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/editorially.png",
+  },
+  {
+    title: "IT & DIGITAL SETUP",
+    link: "https://editrix.ai",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/editrix.png",
+  },
+  {
+    title: "MSME & STARTUP ASSISTANCE",
+    link: "https://cursor.so",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/cursor.png",
+  },
+  {
+    title: "LEGAL & COMPLIANCE",
+    link: "https://userogue.com",
+    thumbnail:
+      "https://aceternity.com/images/products/thumbnails/new/rogue.png",
+  },
+];
+
 const WhatWeDo = () => {
-  return <CustomHeroParallex />;
+  return (
+    <div className="w-full">
+      <CustomHeroParallex items={products} />
+      <div className="w-full flex items-center justify-end">
+        <button className="mt-5 bg-blue-900 text-foreground-primary p-2 px-4 rounded-3xl text-xs">
+          Learn more
+        </button>
+      </div>
+    </div>
+  );
 };
 
 export default WhatWeDo;
