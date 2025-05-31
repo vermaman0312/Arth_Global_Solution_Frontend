@@ -43,6 +43,22 @@ const words = [
 ];
 
 const MainBody = () => {
+  const phoneNumber = "+916205240414";
+  const whatsappMessage = "Hi, I would like to connect with you!";
+
+  const handleCallClick = () => {
+    window.location.href = `tel:${phoneNumber}`;
+  };
+
+  const handleWhatsAppClick = () => {
+    const encodedMessage = encodeURIComponent(whatsappMessage);
+    const whatsappURL = `https://wa.me/${phoneNumber.replace(
+      "+",
+      ""
+    )}?text=${encodedMessage}`;
+    window.open(whatsappURL, "_blank");
+  };
+
   return (
     <div className="h-[30rem] bg-gray-700 bg-opacity-30 rounded-3xl flex flex-col items-center justify-center gap-8">
       <div className="w-full md:w-[70%] px-4 md:px-0">
@@ -54,10 +70,12 @@ const MainBody = () => {
         </CustomLabel>
       </div>
       <div className="flex flex-wrap items-center justify-center gap-4">
-        <CustomMovieBorderButton>
+        <CustomMovieBorderButton onClick={handleCallClick}>
           📞 Book Free Consultation
         </CustomMovieBorderButton>
-        <CustomMovieBorderButton>💬 WhatsApp Now</CustomMovieBorderButton>
+        <CustomMovieBorderButton onClick={handleWhatsAppClick}>
+          💬 WhatsApp Now
+        </CustomMovieBorderButton>
       </div>
     </div>
   );
