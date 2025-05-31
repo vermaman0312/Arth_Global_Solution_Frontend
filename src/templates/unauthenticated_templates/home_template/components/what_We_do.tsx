@@ -99,7 +99,14 @@ export const products = [
 const WhatWeDo = () => {
   return (
     <div className="w-full">
-      <CustomHeroParallex items={products} />
+      <CustomHeroParallex
+        items={products}
+        title="What We Do!"
+        description="We empower NGOs, startups, and businesses with end-to-end support across
+              compliance, funding, digital solutions, and project execution. From
+              legal registrations to audits, websites to fundraising, our expert
+              services help turn ideas into impact."
+      />
       <div className="w-full flex items-center justify-end">
         <button className="mt-5 bg-blue-900 text-foreground-primary p-2 px-4 rounded-3xl text-xs">
           Learn more

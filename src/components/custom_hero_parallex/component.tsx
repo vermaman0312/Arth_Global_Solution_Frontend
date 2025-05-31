@@ -9,10 +9,18 @@ interface TItemsType {
 
 type props = {
   items: Array<TItemsType>;
+  title?: string;
+  description?: string;
 };
 
 const CustomHeroParallex = ({ ...props }: props) => {
-  return <HeroParallax products={props.items} />;
+  return (
+    <HeroParallax
+      products={props.items}
+      title={props.title}
+      description={props.description}
+    />
+  );
 };
 
 export default CustomHeroParallex;
