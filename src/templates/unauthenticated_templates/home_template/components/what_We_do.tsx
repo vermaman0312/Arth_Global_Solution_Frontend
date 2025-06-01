@@ -108,7 +108,7 @@ const WhatWeDo = () => {
               services help turn ideas into impact."
       />
       <div className="w-full flex items-center justify-end">
-        <button className="mt-5 bg-blue-900 text-foreground-primary p-2 px-4 rounded-3xl text-xs">
+        <button className="mt-5 bg-background-secondary text-foreground-secondary p-2 px-4 rounded-3xl text-xs">
           Learn more
         </button>
       </div>

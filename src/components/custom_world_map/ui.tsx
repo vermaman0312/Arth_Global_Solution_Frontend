@@ -10,14 +10,14 @@ interface MapProps {
   lineColor?: string;
 }
 
-export function WorldMap({ dots = [], lineColor = "#0ea5e9" }: MapProps) {
+export function WorldMap({ dots = [], lineColor = "#FF0000FF" }: MapProps) {
   const svgRef = useRef<SVGSVGElement>(null);
   const map = new DottedMap({ height: 100, grid: "diagonal" });
 
   const svgMap = map.getSVG({
     radius: 0.22,
     // color: theme === "dark" ? "#FFFFFF40" : "#00000040",
-    color: "#FFFFFF40",
+    color: "#03045E",
     shape: "circle",
     // backgroundColor: theme === "dark" ? "black" : "white",
     backgroundColor: "transparent",
