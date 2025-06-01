@@ -27,23 +27,19 @@ const navItems = [
     link: "#",
   },
   {
+    name: "Leadership",
+    link: "#"
+  },
+  {
+    name: "Career",
+    link: "#"
+  },
+  {
     name: "Manage & Grow",
     link: "#",
     items: [
       {
-        name: "About us",
-        link: "#",
-      },
-      {
-        name: "Leadership",
-        link: "#",
-      },
-      {
         name: "Our Works",
-        link: "#",
-      },
-      {
-        name: "Career",
         link: "#",
       },
       {
@@ -68,18 +64,6 @@ const navItems = [
     name: "IT & Digital",
     link: "#",
     items: [
-      {
-        name: "About us",
-        link: "#",
-      },
-      {
-        name: "Leadership",
-        link: "#",
-      },
-      {
-        name: "Career",
-        link: "#",
-      },
       {
         name: "Our Services",
         link: "#",

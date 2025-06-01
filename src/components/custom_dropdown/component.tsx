@@ -37,7 +37,7 @@ const CustomDropdown = ({ component, className, title, items }: Props) => {
         </div>
       </DropdownMenuTrigger>
       {items && items.length > 0 && (
-        <DropdownMenuContent className="w-56 bg-background-primary rounded-2xl p-2 mt-5 border-none">
+        <DropdownMenuContent className="w-56 bg-background-secondary rounded-2xl p-2 mt-5 border-none">
           {title && (
             <DropdownMenuLabel className="text-white">
               {title}
@@ -51,7 +51,7 @@ const CustomDropdown = ({ component, className, title, items }: Props) => {
 
               return (
                 <DropdownMenuItem
-                  className="w-full hover:bg-gray-700 bg-opacity-30 rounded-xl cursor-pointer text-white"
+                  className="w-full hover:bg-gray-500 bg-opacity-30 rounded-xl cursor-pointer text-white"
                   key={index}
                   onClick={() => {
                     if (!isString && item.link) {

@@ -18,6 +18,7 @@ const config = {
         button: {
           background: {
             primary: 'hsl(var(--button-background-primary))',
+            secondary: 'hsl(var(--button-background-secondary))',
             warning: 'hsl(var(--button-background-warning))',
             danger: 'hsl(var(--button-background-danger))',
           },

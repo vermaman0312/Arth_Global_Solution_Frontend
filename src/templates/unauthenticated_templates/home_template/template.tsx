@@ -12,11 +12,11 @@ const HomeLayoutTemplate = () => {
       <div>
         <MainBody />
       </div>
-      <div className="w-full mt-5">
-        <WhoWeAre />
-      </div>
       <div>
         <OurServiceCard />
+      </div>
+      <div className="w-full mt-5">
+        <WhoWeAre />
       </div>
       <div>
         <Support />
