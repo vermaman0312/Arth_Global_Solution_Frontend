@@ -85,18 +85,18 @@ const MainBody = () => {
         </CustomLabel>
       </div>
 
-      <div className="p-2 absolute right-4 bottom-4 flex flex-col items-center justify-center gap-4">
+      <div className="p-2 absolute right-4 bottom-4 flex flex-row md:flex-col items-center justify-center gap-4">
         <div
           onClick={() => setIsOpen(true)}
           className={`w-8 h-8 overflow-hidden bg-background-primary rounded-full p-2 shadow-lg shadow-black ${
-            isOpen ? "animate-ping" : "animate-pulse"
+            isOpen ? "animate-ping" : "animate-bounce md:animate-pulse"
           } hover:animate-none cursor-pointer`}
         >
           <img src={iconCall} className="w-full h-full cursor-pointer" />
         </div>
         <div
           onClick={handleWhatsAppClick}
-          className={`w-8 h-8 overflow-hidden bg-background-primary rounded-full p-2 shadow-lg shadow-black animate-pulse hover:animate-none cursor-pointer`}
+          className={`w-8 h-8 overflow-hidden bg-background-primary rounded-full p-2 shadow-lg shadow-black animate-bounce md:animate-pulse hover:animate-none cursor-pointer`}
         >
           <img src={iconWhatsapp} className="w-full h-full cursor-pointer" />
         </div>
