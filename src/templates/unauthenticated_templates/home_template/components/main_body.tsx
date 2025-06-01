@@ -1,9 +1,10 @@
-import React from "react";
+import React, { useState } from "react";
 import { TypewriterEffect } from "../../../../components/custom_typewriter/component";
 import CustomLabel from "../../../../components/custom_label/component";
 import CustomMovieBorderButton from "../../../../components/custo_moving_border_button/component";
 import iconWhatsapp from "../../../../assets/icons/whatsapp.svg";
 import CustomInputField from "../../../../components/custom_input_field/component";
+import CustomTextarea from "../../../../components/custom_textarea/component";
 
 const words = [
   {
@@ -47,6 +48,7 @@ const words = [
 const MainBody = () => {
   const phoneNumber = "+916205240414";
   const whatsappMessage = "Hi, I would like to connect with you!";
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleCallClick = () => {
     window.location.href = `tel:${phoneNumber}`;
@@ -71,14 +73,12 @@ const MainBody = () => {
           Your trusted partner for NGO, MSME, Compliance, Legal & IT services.
         </CustomLabel>
       </div>
-      <div className="flex flex-wrap items-center justify-center gap-4">
-        <CustomMovieBorderButton onClick={handleCallClick}>
-          📞 Book Free Consultation
-        </CustomMovieBorderButton>
-      </div>
 
       <div className="p-2 absolute right-4 bottom-4 flex flex-col items-center justify-center gap-6">
-        <div className="w-8 h-8 overflow-hidden">
+        <div
+          onClick={() => setIsOpen((prev) => !prev)}
+          className="w-8 h-8 overflow-hidden"
+        >
           <img src={iconWhatsapp} className="w-full h-full cursor-pointer" />
         </div>
         <div onClick={handleWhatsAppClick} className="w-8 h-8 overflow-hidden">
@@ -86,22 +86,45 @@ const MainBody = () => {
         </div>
       </div>
 
-      <div className="w-full md:w-auto p-4 px-4 md:px-4 absolute left-1/2 transform -translate-x-1/2 bg-gray-300 rounded-3xl flex flex-col items-center justify-center gap-2 shadow-sm shadow-gray-300">
-        <div className="md:w-[25rem]">
-          <CustomInputField
-            label="Email Address"
-            type="email"
-            placeholder="example@example.com"
-          />
+      {isOpen && (
+        <div className="w-[95%] md:w-[25rem] absolute left-1/2 transform -translate-x-1/2 bg-gray-200 rounded-3xl shadow-lg shadow-gray-900">
+          <div className="w-full h-12 bg-red-500 rounded-t-3xl flex items-center justify-center">
+            <CustomLabel className="text-xl font-semibold text-foreground-secondary">
+              Contact Form
+            </CustomLabel>
+          </div>
+          <div className="w-full p-4 flex flex-col items-center justify-center gap-2">
+            <div className="w-full">
+              <CustomInputField
+                label="Email Address"
+                type="email"
+                placeholder="example@example.com"
+              />
+            </div>
+            <div className="w-full">
+              <CustomInputField
+                label="Phone Number"
+                type="cell"
+                placeholder="+91-XXXXXXXXXX"
+              />
+            </div>
+            <div className="w-full">
+              <CustomTextarea
+                label="Message:"
+                placeholder="write a message here..."
+              />
+            </div>
+            <div className="w-full mt-5">
+              <button
+                onClick={() => setIsOpen(false)}
+                className="bg-background-secondary py-3 text-foreground-secondary p-2 rounded-3xl w-full text-xs"
+              >
+                Send request
+              </button>
+            </div>
+          </div>
         </div>
-        <div className="md:w-[25rem]">
-          <CustomInputField
-            label="Phone Number"
-            type="cell"
-            placeholder="+91-XXXXXXXXXX"
-          />
-        </div>
-      </div>
+      )}
     </div>
   );
 };

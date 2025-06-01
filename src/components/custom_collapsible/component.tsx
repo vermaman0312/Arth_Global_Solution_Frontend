@@ -24,7 +24,7 @@ const CustomCollapsible = ({ ...props }: props) => {
         <h4 className="relative text-foreground-secondary">{props.title}</h4>
         <CollapsibleTrigger asChild>
           <div className="flex items-center justify-between">
-            <ChevronsUpDown className="w-5 h-5" />
+            <ChevronsUpDown className="w-5 h-5 text-foreground-secondary" />
             <span className="sr-only">Toggle</span>
           </div>
         </CollapsibleTrigger>
@@ -36,7 +36,7 @@ const CustomCollapsible = ({ ...props }: props) => {
           return (
             <div
               key={index}
-              className="rounded-md border px-4 py-2 font-mono text-sm mt-2"
+              className="rounded-md border border-gray-500 px-4 py-2 font-poppins text-sm mt-2 text-foreground-secondary"
             >
               {label}
             </div>
