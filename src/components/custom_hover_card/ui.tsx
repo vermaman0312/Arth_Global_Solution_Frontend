@@ -35,7 +35,7 @@ export const HoverEffect = ({
           <AnimatePresence>
             {hoveredIndex === idx && (
               <motion.span
-                className="absolute inset-0 h-full w-full bg-neutral-200 bg-opacity-5 dark:bg-slate-800/[0.8] block rounded-3xl"
+                className="absolute inset-0 h-full w-full bg-background-secondary bg-opacity-20 block rounded-3xl"
                 layoutId="hoverBackground"
                 initial={{ opacity: 0 }}
                 animate={{
@@ -89,7 +89,7 @@ export const CardTitle = ({
   return (
     <CustomLabel
       className={cn(
-        "text-[#DAC5A7] font-semibold text-xl tracking-wide",
+        "text-foreground-secondary font-semibold text-xl tracking-wide",
         className
       )}
     >
@@ -107,7 +107,7 @@ export const CardDescription = ({
   return (
     <p
       className={cn(
-        "mt-5 text-zinc-400 tracking-wide leading-relaxed text-sm",
+        "mt-5 text-zinc-200 tracking-wide leading-relaxed text-xs",
         className
       )}
     >

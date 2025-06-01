@@ -45,7 +45,7 @@ const OurServiceCard = () => {
   return (
     <div className="flex flex-col items-center justify-center gap-4 py-8">
       <div className="flex items-center justify-center">
-        <CustomLabel className="text-4xl text-[#DAC5A7]">Our Services</CustomLabel>
+        <CustomLabel className="text-4xl font-semibold text-foreground-primary">Our Services</CustomLabel>
       </div>
       <div className="flex items-center justify-center flex-wrap gap-4">
         <HoverEffect items={projects} />

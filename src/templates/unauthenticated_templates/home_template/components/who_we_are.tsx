@@ -6,7 +6,7 @@ const WhoWeAre = () => {
   return (
     <div>
       <div className="flex items-center justify-center">
-        <CustomLabel className="text-4xl text-[#DAC5A7]">
+        <CustomLabel className="text-4xl text-foreground-primary font-semibold">
           Who We Are
         </CustomLabel>
       </div>

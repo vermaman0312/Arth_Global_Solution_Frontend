@@ -1,8 +1,8 @@
-import React, { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { TypewriterEffect } from "../../../../components/custom_typewriter/component";
 import CustomLabel from "../../../../components/custom_label/component";
-import CustomMovieBorderButton from "../../../../components/custo_moving_border_button/component";
 import iconWhatsapp from "../../../../assets/icons/whatsapp.svg";
+import iconCall from "../../../../assets/icons/call.svg";
 import CustomInputField from "../../../../components/custom_input_field/component";
 import CustomTextarea from "../../../../components/custom_textarea/component";
 
@@ -46,13 +46,10 @@ const words = [
 ];
 
 const MainBody = () => {
+  const formRef = useRef<HTMLDivElement>(null);
   const phoneNumber = "+916205240414";
   const whatsappMessage = "Hi, I would like to connect with you!";
   const [isOpen, setIsOpen] = useState<boolean>(false);
-
-  const handleCallClick = () => {
-    window.location.href = `tel:${phoneNumber}`;
-  };
 
   const handleWhatsAppClick = () => {
     const encodedMessage = encodeURIComponent(whatsappMessage);
@@ -62,6 +59,20 @@ const MainBody = () => {
     )}?text=${encodedMessage}`;
     window.open(whatsappURL, "_blank");
   };
+
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (formRef.current && !formRef.current.contains(event.target as Node)) {
+        setIsOpen(false);
+      }
+    };
+    if (isOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isOpen]);
 
   return (
     <div className="h-[30rem] bg-background-secondary bg-opacity-30 rounded-3xl flex flex-col items-center justify-center gap-8 relative">
@@ -74,20 +85,28 @@ const MainBody = () => {
         </CustomLabel>
       </div>
 
-      <div className="p-2 absolute right-4 bottom-4 flex flex-col items-center justify-center gap-6">
+      <div className="p-2 absolute right-4 bottom-4 flex flex-col items-center justify-center gap-4">
         <div
-          onClick={() => setIsOpen((prev) => !prev)}
-          className="w-8 h-8 overflow-hidden"
+          onClick={() => setIsOpen(true)}
+          className={`w-8 h-8 overflow-hidden bg-background-primary rounded-full p-2 shadow-lg shadow-black ${
+            isOpen ? "animate-ping" : "animate-pulse"
+          } hover:animate-none cursor-pointer`}
         >
-          <img src={iconWhatsapp} className="w-full h-full cursor-pointer" />
+          <img src={iconCall} className="w-full h-full cursor-pointer" />
         </div>
-        <div onClick={handleWhatsAppClick} className="w-8 h-8 overflow-hidden">
+        <div
+          onClick={handleWhatsAppClick}
+          className={`w-8 h-8 overflow-hidden bg-background-primary rounded-full p-2 shadow-lg shadow-black animate-pulse hover:animate-none cursor-pointer`}
+        >
           <img src={iconWhatsapp} className="w-full h-full cursor-pointer" />
         </div>
       </div>
 
       {isOpen && (
-        <div className="w-[95%] md:w-[25rem] absolute left-1/2 transform -translate-x-1/2 bg-gray-200 rounded-3xl shadow-lg shadow-gray-900">
+        <div
+          ref={formRef}
+          className="w-[95%] md:w-[25rem] absolute left-1/2 transform -translate-x-1/2 bg-gray-200 rounded-3xl shadow-lg shadow-gray-900"
+        >
           <div className="w-full h-12 bg-red-500 rounded-t-3xl flex items-center justify-center">
             <CustomLabel className="text-xl font-semibold text-foreground-secondary">
               Contact Form
