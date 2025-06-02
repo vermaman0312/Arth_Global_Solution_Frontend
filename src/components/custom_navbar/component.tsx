@@ -1,3 +1,4 @@
+import { useTranslation } from "../../react-intl/useTranslation";
 import { BackgroundBeamsWithCollision } from "../custom_body_background/ui";
 import CustomCollapsible from "../custom_collapsible/component";
 import {
@@ -19,49 +20,49 @@ type props = {
 
 const navItems = [
   {
-    name: "Home",
+    name: "headers.home",
     link: "#",
   },
   {
-    name: "About us",
+    name: "headers.about_us",
     link: "#",
   },
   {
-    name: "Leadership",
-    link: "#"
+    name: "headers.leadership",
+    link: "#",
   },
   {
-    name: "Career",
-    link: "#"
+    name: "headers.career",
+    link: "#",
   },
   {
-    name: "Manage & Grow",
+    name: "headers.manage_grow.title",
     link: "#",
     items: [
       {
-        name: "Our Works",
+        name: "headers.manage_grow.our_works",
         link: "#",
       },
       {
-        name: "Funding",
+        name: "headers.manage_grow.funding",
         link: "#",
       },
       {
-        name: "Laws",
+        name: "headers.manage_grow.laws",
         link: "#",
       },
       {
-        name: "News",
+        name: "headers.manage_grow.news",
         link: "#",
       },
       {
-        name: "Our Services",
+        name: "headers.manage_grow.our_services",
         link: "#",
       },
     ],
   },
   {
-    name: "IT & Digital",
+    name: "headers.it_digital.title",
     link: "#",
     items: [
       {
@@ -79,11 +80,11 @@ const navItems = [
     ],
   },
   {
-    name: "Blog",
+    name: "headers.blogs",
     link: "#",
   },
   {
-    name: "Contact us",
+    name: "headers.contact_us",
     link: "#",
   },
 ];

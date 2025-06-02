@@ -5,6 +5,7 @@ import iconWhatsapp from "../../../../assets/icons/whatsapp.svg";
 import iconCall from "../../../../assets/icons/call.svg";
 import CustomInputField from "../../../../components/custom_input_field/component";
 import CustomTextarea from "../../../../components/custom_textarea/component";
+import { LanguageSelector } from "../../../../react-intl/languageSelector";
 
 const words = [
   {
@@ -83,6 +84,10 @@ const MainBody = () => {
         <CustomLabel className="text-center text-foreground-secondary font-light">
           Your trusted partner for NGO, MSME, Compliance, Legal & IT services.
         </CustomLabel>
+      </div>
+
+      <div className="absolute top-4 right-4">
+        <LanguageSelector />
       </div>
 
       <div className="p-2 absolute right-4 bottom-4 flex flex-row md:flex-col items-center justify-center gap-4">

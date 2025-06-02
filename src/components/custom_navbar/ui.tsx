@@ -10,6 +10,7 @@ import { cn } from "../../utils/cn";
 import { ChevronDown, Earth, Menu, X } from "lucide-react";
 import CustomLabel from "../custom_label/component";
 import CustomDropdown from "../custom_dropdown/component";
+import { useTranslation } from "../../react-intl/useTranslation";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -119,6 +120,7 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
+  const { t } = useTranslation();
 
   return (
     <motion.div
@@ -147,7 +149,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
               <CustomDropdown
                 component={
                   <div className="flex items-center justify-center gap-1">
-                    {item.name}
+                    {t(item.name)}
                     <ChevronDown className="w-5 h-5" />
                   </div>
                 }
@@ -171,7 +173,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
                 />
               )}
               <span className="relative z-20 text-foreground-secondary">
-                {item.name}
+                {t(item.name)}
               </span>
             </a>
           )}

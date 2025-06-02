@@ -10,6 +10,7 @@ import {
   DropdownMenuTrigger,
 } from "./ui";
 import { cn } from "../../utils/cn";
+import { useTranslation } from "../../react-intl/useTranslation";
 
 interface TItemsType {
   name: string;
@@ -24,6 +25,7 @@ type Props = {
 };
 
 const CustomDropdown = ({ component, className, title, items }: Props) => {
+  const { t } = useTranslation();
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
@@ -40,7 +42,7 @@ const CustomDropdown = ({ component, className, title, items }: Props) => {
         <DropdownMenuContent className="w-56 bg-background-secondary rounded-2xl p-2 mt-5 border-none">
           {title && (
             <DropdownMenuLabel className="text-white">
-              {title}
+              {t(title)}
             </DropdownMenuLabel>
           )}
           <div className="my-1 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
@@ -59,7 +61,7 @@ const CustomDropdown = ({ component, className, title, items }: Props) => {
                     }
                   }}
                 >
-                  {label}
+                  {t(label)}
                   <DropdownMenuShortcut>{`⇧⌘${
                     label.split("")[0]
                   }`}</DropdownMenuShortcut>
