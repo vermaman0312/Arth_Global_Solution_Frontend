@@ -12,7 +12,7 @@ const CustomFooter = () => {
   return (
     <div className="h-[36rem] md:h-[18.5rem] flex flex-col items-end justify-end relative">
       <div
-        className="w-[90%] h-12 absolute top-0 left-1/2 transform -translate-x-1/2 z-50 rounded-xl shadow-md shadow-black flex items-center justify-around gap-4"
+        className="w-[90%] h-12 absolute top-0 left-1/2 transform -translate-x-1/2 z-10 rounded-xl shadow-md shadow-black flex items-center justify-around gap-4"
         style={{
           backgroundImage: "linear-gradient(to right, #A1FFCE, #FAFFD1)",
         }}
