@@ -1,6 +1,7 @@
 import React from "react";
 import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "./ui";
 import { ChevronsUpDown } from "lucide-react";
+import { useTranslation } from "../../react-intl/useTranslation";
 
 interface TItemsType {
   name: string;
@@ -13,6 +14,7 @@ type props = {
 };
 
 const CustomCollapsible = ({ ...props }: props) => {
+  const { t } = useTranslation();
   const [isOpen, setIsOpen] = React.useState<boolean>(false);
   return (
     <Collapsible
@@ -21,7 +23,7 @@ const CustomCollapsible = ({ ...props }: props) => {
       className="flex w-full flex-col gap-0"
     >
       <div className="flex items-center justify-between">
-        <h4 className="relative text-foreground-secondary">{props.title}</h4>
+        <h4 className="relative text-foreground-secondary">{t(props.title)}</h4>
         <CollapsibleTrigger asChild>
           <div className="flex items-center justify-between">
             <ChevronsUpDown className="w-5 h-5 text-foreground-secondary" />
@@ -38,7 +40,7 @@ const CustomCollapsible = ({ ...props }: props) => {
               key={index}
               className="rounded-md border border-gray-500 px-4 py-2 font-poppins text-sm mt-2 text-foreground-secondary"
             >
-              {label}
+              {t(label)}
             </div>
           );
         })}

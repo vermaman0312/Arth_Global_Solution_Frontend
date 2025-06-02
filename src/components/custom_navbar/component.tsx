@@ -66,15 +66,15 @@ const navItems = [
     link: "#",
     items: [
       {
-        name: "Our Services",
+        name: "headers.it_digital.our_services",
         link: "#",
       },
       {
-        name: "Our Products",
+        name: "headers.it_digital.our_products",
         link: "#",
       },
       {
-        name: "Spotlight",
+        name: "headers.it_digital.spotlight",
         link: "#",
       },
     ],
@@ -91,6 +91,7 @@ const navItems = [
 
 export function CustomNavbar({ ...props }: props) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const {t} = useTranslation();
 
   return (
     <div className="relative w-full scrollbar-hidden">
@@ -118,7 +119,7 @@ export function CustomNavbar({ ...props }: props) {
             {navItems.map((item, idx) => (
               <>
                 {item.items && item.items?.length > 0 ? (
-                  <CustomCollapsible title={item.name} items={item.items} />
+                  <CustomCollapsible title={t(item.name)} items={item.items} />
                 ) : (
                   <a
                     key={`mobile-link-${idx}`}
@@ -126,7 +127,7 @@ export function CustomNavbar({ ...props }: props) {
                     onClick={() => setIsMobileMenuOpen(false)}
                     className="relative text-foreground-secondary w-full"
                   >
-                    <span className="block">{item.name}</span>
+                    <span className="block">{t(item.name)}</span>
                   </a>
                 )}
               </>

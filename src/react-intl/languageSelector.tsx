@@ -40,7 +40,7 @@ export function LanguageSelector() {
               handleLanguageChange("en-GB");
               setIsOpen(false);
             }}
-            className="border-b font-semibold text-foreground-primary cursor-pointer"
+            className="border-b border-secondary font-semibold text-foreground-primary cursor-pointer"
           >
             EN
           </CustomLabel>
@@ -49,7 +49,7 @@ export function LanguageSelector() {
               handleLanguageChange("hi-IN");
               setIsOpen(false);
             }}
-            className="border-b font-semibold text-foreground-primary cursor-pointer"
+            className="border-b border-secondary font-semibold text-foreground-primary cursor-pointer"
           >
             HI
           </CustomLabel>

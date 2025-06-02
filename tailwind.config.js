@@ -22,7 +22,16 @@ const config = {
             warning: 'hsl(var(--button-background-warning))',
             danger: 'hsl(var(--button-background-danger))',
           },
-          foreground: 'hsl(var(--button-foreground))',
+          foreground: {
+            primary: 'hsl(var(--button-foreground-primary))',
+            secondary: 'hsl(var(--button-foreground-secondary))',
+            danger: 'hsl(var(--button-foreground-danger))',
+          },
+        },
+        border: {
+          primary: 'hsl(var(--border-primary))',
+          secondary: 'hsl(var(--border-secondary))',
+          danger: 'hsl(var(--border-danger))',
         },
         input: {
           placeholder: {
