@@ -20,5 +20,30 @@
     },
     "blogs": "Blogs",
     "contact_us": "Contact us"
+  },
+  "unauthenticated_page": {
+    "home_page": {
+      "title": {
+        "EMPOWERING": "EMPOWERING",
+        "GROWTH": "GROWTH",
+        "WITH": "WITH",
+        "SMART,": "SMART,",
+        "AFFORDABLE,": "AFFORDABLE,",
+        "AND": "AND",
+        "EXPERT": "EXPERT",
+        "SOLUTIONS": "SOLUTIONS"
+      },
+      "description": "Your trusted partner for NGO, MSME, Compliance, Legal & IT services.",
+      "contact_form": {
+        "title": "Contact Form",
+        "email_address": "Email Address:",
+        "email_placeholder": "example@example.com",
+        "phone_number": "Phone Number:",
+        "phone_placeholder": "+91 12345 67890",
+        "message": "Message:",
+        "message_placeholder": "Type your message here...",
+        "send_request": "Send request"
+      }
+    }
   }
 }

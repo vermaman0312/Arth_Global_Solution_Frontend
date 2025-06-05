@@ -6,47 +6,49 @@ import iconCall from "../../../../assets/icons/call.svg";
 import CustomInputField from "../../../../components/custom_input_field/component";
 import CustomTextarea from "../../../../components/custom_textarea/component";
 import { LanguageSelector } from "../../../../react-intl/languageSelector";
+import { useTranslation } from "../../../../react-intl/useTranslation";
 
 const words = [
   {
-    text: "EMPOWERING",
+    text: "unauthenticated_page.home_page.title.EMPOWERING",
     className: "text-[#DAC5A7] text-2xl md:text-4xl text-center",
   },
   {
-    text: "GROWTH",
+    text: "unauthenticated_page.home_page.title.GROWTH",
     className: "text-[#DAC5A7] text-2xl md:text-4xl text-center",
   },
   {
-    text: "WITH",
+    text: "unauthenticated_page.home_page.title.WITH",
     className: "text-[#DAC5A7] text-2xl md:text-4xl text-center",
   },
   {
-    text: "SMART,",
+    text: "unauthenticated_page.home_page.title.SMART,",
     className: "text-[#DAC5A7] text-2xl md:text-4xl text-center",
   },
   {
-    text: "AFFORDABLE,",
+    text: "unauthenticated_page.home_page.title.AFFORDABLE,",
     className:
       "text-blue-500 dark:text-blue-500 text-2xl md:text-4xl text-center",
   },
   {
-    text: "AND",
+    text: "unauthenticated_page.home_page.title.AND",
     className:
       "text-blue-500 dark:text-blue-500 text-2xl md:text-4xl text-center",
   },
   {
-    text: "EXPERT",
+    text: "unauthenticated_page.home_page.title.EXPERT",
     className:
       "text-blue-500 dark:text-blue-500 text-2xl md:text-4xl text-center",
   },
   {
-    text: "SOLUTIONS",
+    text: "unauthenticated_page.home_page.title.SOLUTIONS",
     className:
       "text-blue-500 dark:text-blue-500 text-2xl md:text-4xl text-center",
   },
 ];
 
 const MainBody = () => {
+  const { t } = useTranslation();
   const formRef = useRef<HTMLDivElement>(null);
   const phoneNumber = "+916205240414";
   const whatsappMessage = "Hi, I would like to connect with you!";
@@ -82,7 +84,7 @@ const MainBody = () => {
       </div>
       <div className="w-full md:w-[70%] px-4 md:px-0 flex items-center justify-center">
         <CustomLabel className="text-center text-foreground-secondary font-light">
-          Your trusted partner for NGO, MSME, Compliance, Legal & IT services.
+          {t("unauthenticated_page.home_page.description")}
         </CustomLabel>
       </div>
 
@@ -114,28 +116,38 @@ const MainBody = () => {
         >
           <div className="w-full h-12 bg-red-500 rounded-t-3xl flex items-center justify-center">
             <CustomLabel className="text-xl font-semibold text-foreground-secondary">
-              Contact Form
+              {t("unauthenticated_page.home_page.contact_form.title")}
             </CustomLabel>
           </div>
           <div className="w-full p-4 flex flex-col items-center justify-center gap-2">
             <div className="w-full">
               <CustomInputField
-                label="Email Address"
+                label={t(
+                  "unauthenticated_page.home_page.contact_form.email_address"
+                )}
                 type="email"
-                placeholder="example@example.com"
+                placeholder={t(
+                  "unauthenticated_page.home_page.contact_form.email_placeholder"
+                )}
               />
             </div>
             <div className="w-full">
               <CustomInputField
-                label="Phone Number"
+                label={t(
+                  "unauthenticated_page.home_page.contact_form.phone_number"
+                )}
                 type="cell"
-                placeholder="+91-XXXXXXXXXX"
+                placeholder={t(
+                  "unauthenticated_page.home_page.contact_form.phone_placeholder"
+                )}
               />
             </div>
             <div className="w-full">
               <CustomTextarea
-                label="Message:"
-                placeholder="write a message here..."
+                label={t("unauthenticated_page.home_page.contact_form.message")}
+                placeholder={t(
+                  "unauthenticated_page.home_page.contact_form.message_placeholder"
+                )}
               />
             </div>
             <div className="w-full mt-5">
@@ -143,7 +155,7 @@ const MainBody = () => {
                 onClick={() => setIsOpen(false)}
                 className="bg-background-secondary py-3 text-foreground-secondary p-2 rounded-3xl w-full text-xs"
               >
-                Send request
+                {t("unauthenticated_page.home_page.contact_form.send_request")}
               </button>
             </div>
           </div>

@@ -6,7 +6,9 @@ const HomePageLayout = () => {
   return (
     <div className="w-full">
       <HomeLayoutTemplate />
-      <CustomFooter />
+      <div className="mt-5">
+        <CustomFooter />
+      </div>
     </div>
   );
 };

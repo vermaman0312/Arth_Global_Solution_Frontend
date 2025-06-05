@@ -25,7 +25,7 @@ const CustomInputField = ({ ...props }: props) => {
           className={cn("text-foreground-primary", props.labelClassName)}
           htmlFor={props.id}
         >
-          {`${props.label}:`}
+          {`${props.label}`}
         </Label>
       )}
       <Input

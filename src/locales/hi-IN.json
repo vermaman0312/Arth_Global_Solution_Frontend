@@ -20,5 +20,30 @@
     },
     "blogs": "ब्लॉग्स",
     "contact_us": "संपर्क करें"
+  },
+  "unauthenticated_page": {
+    "home_page": {
+      "title": {
+        "EMPOWERING": "सशक्तिकरण",
+        "GROWTH": "विकास",
+        "WITH": "के साथ",
+        "SMART,": "स्मार्ट,",
+        "AFFORDABLE,": "सुलभ,",
+        "AND": "और",
+        "EXPERT": "विशेषज्ञ",
+        "SOLUTIONS": "समाधान"
+      },
+      "description": "NGO, MSME, अनुपालन, कानूनी और आईटी सेवाओं के लिए आपका विश्वसनीय साथी।",
+      "contact_form": {
+        "title": "संपर्क फ़ॉर्म",
+        "email_address": "ईमेल पता:",
+        "email_placeholder": "example@example.com",
+        "phone_number": "फोन नंबर:",
+        "phone_placeholder": "+91 12345 67890",
+        "message": "संदेश:",
+        "message_placeholder": "अपना संदेश यहां लिखें...",
+        "send_request": "अनुरोध भेजें"
+      }
+    }
   }
 }

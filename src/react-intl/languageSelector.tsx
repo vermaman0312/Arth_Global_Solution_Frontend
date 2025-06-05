@@ -21,7 +21,7 @@ export function LanguageSelector() {
     <div className="flex items-center flex-col justify-center gap-1">
       <div
         onClick={() => setIsOpen((prev) => !prev)}
-        className="border-2 p-2 rounded-full h-8 w-8 bg-background-primary flex items-center justify-center cursor-pointer text-xs font-semibold text-foreground-primary"
+        className="border-2 p-2 rounded-full h-8 w-8 bg-background-primary flex items-center justify-center cursor-pointer text-xs font-semibold text-foreground-primary select-none"
       >
         {language ? (
           language === "en-GB" ? (
@@ -30,17 +30,17 @@ export function LanguageSelector() {
             "HI"
           )
         ) : (
-          <Languages className="w-5 h-5 text-foreground-primary" />
+          <Languages className="w-5 h-5 text-foreground-primary select-none" />
         )}
       </div>
       {isOpen && (
-        <div className="border p-2 w-8 h-20 bg-background-primary flex flex-col items-center justify-center gap-2 rounded-full">
+        <div className="border p-2 w-8 h-20 bg-background-primary flex flex-col items-center justify-center gap-2 rounded-full select-none">
           <CustomLabel
             onClick={() => {
               handleLanguageChange("en-GB");
               setIsOpen(false);
             }}
-            className="border-b border-secondary font-semibold text-foreground-primary cursor-pointer"
+            className="border-b border-secondary font-semibold text-foreground-primary cursor-pointer select-none"
           >
             EN
           </CustomLabel>
@@ -49,7 +49,7 @@ export function LanguageSelector() {
               handleLanguageChange("hi-IN");
               setIsOpen(false);
             }}
-            className="border-b border-secondary font-semibold text-foreground-primary cursor-pointer"
+            className="border-b border-secondary font-semibold text-foreground-primary cursor-pointer select-none"
           >
             HI
           </CustomLabel>

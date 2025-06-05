@@ -1,6 +1,7 @@
 import { motion, stagger, useAnimate, useInView } from "framer-motion";
 import { useEffect } from "react";
 import { cn } from "../../utils/cn";
+import { useTranslation } from "../../react-intl/useTranslation";
 
 export const TypewriterEffect = ({
   words,
@@ -14,13 +15,15 @@ export const TypewriterEffect = ({
   className?: string;
   cursorClassName?: string;
 }) => {
+  const { t } = useTranslation();
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
     return {
       ...word,
-      text: word.text.split(""),
+      text: t(word.text).split(""),
     };
   });
+
 
   const [scope, animate] = useAnimate();
   const isInView = useInView(scope);
@@ -48,18 +51,20 @@ export const TypewriterEffect = ({
         {wordsArray.map((word, idx) => {
           return (
             <div key={`word-${idx}`} className="inline-block">
-              {word.text.map((char, index) => (
-                <motion.span
-                  initial={{}}
-                  key={`char-${index}`}
-                  className={cn(
-                    `dark:text-white text-black opacity-0 hidden`,
-                    word.className
-                  )}
-                >
-                  {char}
-                </motion.span>
-              ))}
+              {word.text.map((char, index) => {
+                return (
+                  <motion.span
+                    initial={{}}
+                    key={`char-${index}`}
+                    className={cn(
+                      `dark:text-white text-black opacity-0 hidden`,
+                      word.className
+                    )}
+                  >
+                    {t(char)}
+                  </motion.span>
+                );
+              })}
               &nbsp;
             </div>
           );
@@ -108,11 +113,12 @@ export const TypewriterEffectSmooth = ({
   className?: string;
   cursorClassName?: string;
 }) => {
+  const { t } = useTranslation();
   // split text inside of words into array of characters
   const wordsArray = words.map((word) => {
     return {
       ...word,
-      text: word.text.split(""),
+      text: t(word.text).split(""),
     };
   });
   const renderWords = () => {
@@ -126,7 +132,7 @@ export const TypewriterEffectSmooth = ({
                   key={`char-${index}`}
                   className={cn(`dark:text-white text-black `, word.className)}
                 >
-                  {char}
+                  {t(char)}
                 </span>
               ))}
               &nbsp;
