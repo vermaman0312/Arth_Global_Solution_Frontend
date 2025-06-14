@@ -4,12 +4,11 @@ import CustomLabel from "../../../../components/custom_label/component";
 const OurInspiration = () => {
   return (
     <div className="flex flex-col md:flex-row w-full items-start justify-between gap-4">
-      <div className="bg-red-400 w-96 h-96 flex-shrink-0"></div>
+      <div className="bg-red-400 w-full md:w-96 h-96 flex-shrink-0"></div>
       <div className="w-full h-full">
-        <div className="w-full relative">
-          <div className="bg-background-secondary w-10 h-9 absolute left-1.5 top-0 -z-10" />
+        <div className="w-full overflow-hidden">
           <CustomLabel className="max-w-7xl pl-4 mx-auto text-xl md:text-4xl font-bold text-foreground-primary font-sans z-10">
-            <span className="text-foreground-secondary">O</span>ur Inspiration
+            <span className="text-foreground-secondary bg-background-secondary p-2 rounded-tr-lg">O</span>ur Inspiration
           </CustomLabel>
         </div>
         <div className="w-full relative mt-5 pl-4">
