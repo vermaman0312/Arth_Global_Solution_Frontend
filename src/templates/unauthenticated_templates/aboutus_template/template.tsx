@@ -20,7 +20,7 @@ const AboutUsLayoutTemplate = () => {
         <OurMission />
         <OurVision />
       </div>
-      <div className="md:py-10 flex flex-col md:flex-row items-start justify-between gap-8">
+      <div className="py-6 md:py-10 flex flex-col md:flex-row items-start justify-between gap-8">
         <OurValues />
       </div>
     </div>

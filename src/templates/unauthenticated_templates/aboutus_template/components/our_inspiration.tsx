@@ -18,21 +18,21 @@ const OurInspiration = () => {
           </CustomLabel>
         </div>
         <div className="w-full relative mt-5 pl-4">
-          <CustomLabel className="text-md font-normal text-foreground-primary font-sans z-10">
+          <CustomLabel className="text-md text-justify font-normal text-foreground-primary font-sans z-10">
             {t(
               "unauthenticated_page.about_us_page.our_inspiration_description_1"
             )}
           </CustomLabel>
         </div>
         <div className="w-full relative mt-5 pl-4">
-          <CustomLabel className="mt-5 text-md font-normal text-foreground-primary font-sans z-10">
+          <CustomLabel className="mt-5 text-md text-justify font-normal text-foreground-primary font-sans z-10">
             {t(
               "unauthenticated_page.about_us_page.our_inspiration_description_2"
             )}
           </CustomLabel>
         </div>
         <div className="w-full relative mt-5 pl-4">
-          <CustomLabel className="mt-5 text-md font-normal text-foreground-primary font-sans z-10">
+          <CustomLabel className="mt-5 text-md text-justify font-normal text-foreground-primary font-sans z-10">
             {t(
               "unauthenticated_page.about_us_page.our_inspiration_description_3"
             )}

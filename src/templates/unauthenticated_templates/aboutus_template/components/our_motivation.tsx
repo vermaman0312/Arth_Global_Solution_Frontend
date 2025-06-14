@@ -1,4 +1,3 @@
-import React from "react";
 import CustomLabel from "../../../../components/custom_label/component";
 import { useTranslation } from "../../../../react-intl/useTranslation";
 
@@ -14,7 +13,7 @@ const OurMotivation = () => {
           {t("unauthenticated_page.about_us_page.our_motivation_title").slice(1)}
         </CustomLabel>
       </div>
-      <CustomLabel className="text-md font-normal text-foreground-primary font-sans z-10">
+      <CustomLabel className="text-md text-justify font-normal text-foreground-primary font-sans z-10">
         {t("unauthenticated_page.about_us_page.our_motivation_description")}
       </CustomLabel>
     </div>
