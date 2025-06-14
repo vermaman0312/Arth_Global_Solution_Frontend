@@ -1,5 +1,6 @@
 import React from "react";
 import { Card, Carousel } from "./ui";
+import CustomLabel from "../custom_label/component";
 
 const DummyContent = () => {
   return (
@@ -80,9 +81,9 @@ const CustomCardCarousel = () => {
 
   return (
     <div className="w-full h-full py-20">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+      <CustomLabel className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-foreground-primary font-sans">
         Why Choose Us?
-      </h2>
+      </CustomLabel>
       <Carousel items={cards} />
     </div>
   );

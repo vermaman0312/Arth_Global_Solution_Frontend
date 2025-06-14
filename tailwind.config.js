@@ -180,6 +180,7 @@ const config = {
       },
       fontFamily: {
         poppins: ['Poppins', 'sans-serif'],
+        handwritten: ['"Dancing Script"', 'cursive'],
       },
     },
   },

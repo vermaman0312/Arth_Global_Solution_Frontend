@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import ErrorBoundary from "../../../features/error-boundary";
+import AboutUsPageLayout from "../../../layouts/unauthenticated_layouts/aboutus_layout/layout";
 
 const AboutUsPage = () => {
   return (
-    <div>AboutUsPage</div>
-  )
-}
+    <ErrorBoundary>
+      <AboutUsPageLayout />
+    </ErrorBoundary>
+  );
+};
 
-export default AboutUsPage
+export default AboutUsPage;

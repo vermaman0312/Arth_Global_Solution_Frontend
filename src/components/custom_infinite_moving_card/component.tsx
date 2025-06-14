@@ -1,5 +1,6 @@
 import React from "react";
 import { InfiniteMovingCards } from "./ui";
+import CustomLabel from "../custom_label/component";
 
 const testimonials = [
   {
@@ -36,9 +37,11 @@ const testimonials = [
 const CustomMovingCard = () => {
   return (
     <div className="rounded-md flex flex-col antialiased bg-white dark:bg-black dark:bg-grid-white/[0.05] items-center justify-center relative overflow-hidden">
-      <h2 className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-neutral-800 dark:text-neutral-200 font-sans">
+      <div className="w-full py-10">
+        <CustomLabel className="max-w-7xl pl-4 mx-auto text-xl md:text-5xl font-bold text-foreground-primary font-sans">
         Testimonials
-      </h2>
+      </CustomLabel>
+      </div>
       <InfiniteMovingCards
         items={testimonials}
         direction="right"

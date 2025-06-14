@@ -6,6 +6,7 @@ import NotFoundPage from "../pages/not_found_page/page";
 import { useEffect, useState } from "react";
 import { authMiddleware } from "../middlewares/userAuth.middleware";
 import HomePage from "../pages/unauthenticated_pages/home_page/page";
+import AboutUsPage from "../pages/unauthenticated_pages/aboutus_page/page";
 // Pages
 
 const RouteIndex = () => {
@@ -39,7 +40,8 @@ const RouteIndex = () => {
       <Route path="/" element={<PublicRoute />}>
         <Route path="/" element={<InnerContent />}>
           <Route path="/" element={<Navigate replace to={`/public/home`} />} />
-          <Route path={`/public/home/*`} element={<HomePage />} />
+          <Route path={`/public/home`} element={<HomePage />} />
+          <Route path={`/public/about-us`} element={<AboutUsPage />} />
         </Route>
       </Route>
 

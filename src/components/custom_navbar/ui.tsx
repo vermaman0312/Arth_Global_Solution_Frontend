@@ -11,6 +11,7 @@ import { ChevronDown, Earth, Menu, X } from "lucide-react";
 import CustomLabel from "../custom_label/component";
 import CustomDropdown from "../custom_dropdown/component";
 import { useTranslation } from "../../react-intl/useTranslation";
+import { useLocation } from "react-router-dom";
 
 interface NavbarProps {
   children: React.ReactNode;
@@ -121,6 +122,12 @@ export const NavBody = ({ children, className, visible }: NavBodyProps) => {
 export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
   const [hovered, setHovered] = useState<number | null>(null);
   const { t } = useTranslation();
+  const location = useLocation();
+  const pathname = location.pathname;
+  const url = pathname.split("/public/")[1];
+
+  console.log("Current URL:", url);
+
 
   return (
     <motion.div
@@ -136,7 +143,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             <a
               onMouseEnter={() => setHovered(idx)}
               onClick={onItemClick}
-              className="relative px-4 py-2 text-foreground-secondary"
+              className={`relative px-4 py-2 text-foreground-secondary ${url === item.link.split("/public/")[1] ? "bg-gray-400" : ""}`}
               key={`link-${idx}`}
               href={item.items.length > 0 ? undefined : item.link}
             >
@@ -162,7 +169,7 @@ export const NavItems = ({ items, className, onItemClick }: NavItemsProps) => {
             <a
               onMouseEnter={() => setHovered(idx)}
               onClick={onItemClick}
-              className="relative px-4 py-2 text-foreground-secondary"
+              className={`relative px-4 py-2 rounded-full text-foreground-secondary ${url === item.link.split("/public/")[1] ? "bg-gray-400" : ""}`}
               key={`link-${idx}`}
               href={item.link}
             >

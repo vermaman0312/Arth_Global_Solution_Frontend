@@ -1,3 +1,4 @@
+import { useLocation } from "react-router-dom";
 import { useTranslation } from "../../react-intl/useTranslation";
 import { BackgroundBeamsWithCollision } from "../custom_body_background/ui";
 import CustomCollapsible from "../custom_collapsible/component";
@@ -21,11 +22,11 @@ type props = {
 const navItems = [
   {
     name: "headers.home",
-    link: "#",
+    link: "/public/home",
   },
   {
     name: "headers.about_us",
-    link: "#",
+    link: "/public/about-us",
   },
   {
     name: "headers.leadership",
@@ -91,7 +92,10 @@ const navItems = [
 
 export function CustomNavbar({ ...props }: props) {
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
-  const {t} = useTranslation();
+  const { t } = useTranslation();
+  const location = useLocation();
+  const pathname = location.pathname;
+  const url = pathname.split("/public/")[1];
 
   return (
     <div className="relative w-full scrollbar-hidden">
@@ -119,13 +123,13 @@ export function CustomNavbar({ ...props }: props) {
             {navItems.map((item, idx) => (
               <>
                 {item.items && item.items?.length > 0 ? (
-                  <CustomCollapsible title={t(item.name)} items={item.items} />
+                  <CustomCollapsible title={t(item.name)} items={item.items} URL={item.link} />
                 ) : (
                   <a
                     key={`mobile-link-${idx}`}
                     href={item.link}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className="relative text-foreground-secondary w-full"
+                    className={`relative text-foreground-secondary w-full px-4 p-1 rounded-full ${url === item.link.split("/public/")[1] ? "bg-gray-400" : ""}`}
                   >
                     <span className="block">{t(item.name)}</span>
                   </a>
