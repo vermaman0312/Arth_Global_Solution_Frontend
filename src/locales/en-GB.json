@@ -44,6 +44,26 @@
         "message_placeholder": "Type your message here...",
         "send_request": "Send request"
       }
+    },
+    "about_us_page": {
+      "founder_name": "Atal Verma",
+      "founder_post": "Founder & Chairman of Board, Group CEO",
+      "our_inspiration_title": "Our Inspiration",
+      "our_inspiration_description_1": "Every great journey begins with a spark a vision that dares to challenge the conventional and strive for something greater. Our inspiration stems from those very individuals and ideas that believed in building a better world, not just a better business. We owe our roots to the values of integrity, innovation, and inclusive growth the driving forces behind our mission to empower startups, uplift NGOs, and support enterprises navigating complex legal, financial, and digital landscapes.",
+      "our_inspiration_description_2": "At the heart of our inspiration lies the belief that true progress happens when purpose meets passion. We have been moved by the tireless efforts of social entrepreneurs, changemakers, and pioneers who transformed local initiatives into global movements. Their courage, resilience, and commitment to sustainable impact constantly guide our approach to creating systems that not only work but uplift lives.",
+      "our_inspiration_description_3": "We are also deeply inspired by the power of technology and governance working hand in hand. Whether it’s a digital transformation or compliance support for a grassroots initiative, we see each task as a step toward nation-building. It’s this blend of responsibility and ambition that shapes every service we offer from project execution to IT setup and fuels our vision to be a trusted partner in purposeful progress.",
+      "our_dna_title": "Our DNA",
+      "our_dna_description": "At the core of our identity lies a deep commitment to purpose-driven innovation, ethical governance, and inclusive growth. We blend entrepreneurial spirit with social responsibility, empowering startups, NGOs, and enterprises through seamless regulatory support, strategic guidance, and cutting-edge digital solutions. Our DNA reflects agility, integrity, and a passion to simplify complexity enabling those we serve to focus on what truly matters: building, growing, and making a lasting impact.",
+      "our_motivation_title": "Our Motivation",
+      "our_motivation_description": "We are driven by the belief that real change begins when ideas are nurtured with the right support. Our motivation comes from the everyday visionaries entrepreneurs with big dreams, NGOs working at the grassroots, and organizations striving to make a difference. Each challenge they face pushes us to go further, think smarter, and act with purpose. We exist to be the bridge between ambition and action, simplifying the complex so our partners can focus on growth, impact, and innovation.",
+      "our_mission_title": "Our Mission",
+      "our_mission_description": "To empower startups, NGOs, and growing enterprises by providing seamless support in legal, regulatory, financial, and digital domains enabling them to innovate, comply, and scale with confidence. We are committed to simplifying complexity, fostering sustainability, and becoming a trusted partner in every stage of our clients’ growth journey.",
+      "our_vision_title": "Our Vision",
+      "our_vision_Description": "To be a catalyst for impactful transformation by building an ecosystem where businesses, NGOs, and startups thrive with clarity, compliance, and confidence. We envision a future where every idea no matter how small gets the right support to grow, innovate, and create meaningful change in society through responsible governance and digital empowerment.",
+      "our_values_title": "Our Values",
+      "our_values_description_1": "Our values are the soul of our organization built on unwavering integrity, driven by meaningful innovation, and guided by the purpose to empower every idea that has the potential to create real change. We believe in simplifying complexity, honoring transparency, and walking every step with those who dare to build, serve, and transform. Through collaboration, empathy, and excellence, we are not just shaping businesses we are shaping a future that is sustainable, inclusive, and truly impactful.",
+      "our_values_description_2": "At the heart of our organization lies a deep-rooted belief in integrity, responsibility, and purpose. We uphold transparency in every interaction and ensure that trust is never compromised with our clients, our partners, or our team. Every service we provide is driven by a genuine intent to solve problems, create impact, and empower the communities we serve.",
+      "our_values_description_3": "Collaboration, empathy, and innovation guide our daily actions. We listen before we act, co-create solutions with our clients, and constantly adapt in an ever-evolving ecosystem. Whether it’s helping a startup find its footing or supporting NGOs with compliance and execution, our core values remind us that our success lies in helping others succeed with honesty, clarity, and heart."
     }
   }
 }

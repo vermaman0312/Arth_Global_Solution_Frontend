@@ -1,47 +1,49 @@
-import React from "react";
 import CustomLabel from "../../../../components/custom_label/component";
+import { useTranslation } from "../../../../react-intl/useTranslation";
 
 const OurInspiration = () => {
+  const { t } = useTranslation();
   return (
     <div className="flex flex-col md:flex-row w-full items-start justify-between gap-4">
-      <div className="bg-red-400 w-full md:w-96 h-96 flex-shrink-0"></div>
+      <div className="bg-red-400 w-full md:w-96 h-[27rem] flex-shrink-0"></div>
       <div className="w-full h-full">
         <div className="w-full overflow-hidden">
           <CustomLabel className="max-w-7xl pl-4 mx-auto text-xl md:text-4xl font-bold text-foreground-primary font-sans z-10">
-            <span className="text-foreground-secondary bg-background-secondary p-2 rounded-tr-lg">O</span>ur Inspiration
+            <span className="text-foreground-secondary bg-background-secondary p-2 rounded-tr-lg">
+              {t("unauthenticated_page.about_us_page.our_inspiration_title")[0]}
+            </span>
+            {t(
+              "unauthenticated_page.about_us_page.our_inspiration_title"
+            ).slice(1)}
           </CustomLabel>
         </div>
         <div className="w-full relative mt-5 pl-4">
           <CustomLabel className="text-md font-normal text-foreground-primary font-sans z-10">
-            We acknowledge our inspiration, a genius, a visionary, an innovator
-            with revolutionary thoughts, rarely seen on the world podium,
-            someone who has facilitated thousands of successful Entrepreneurs
-            globally.
+            {t(
+              "unauthenticated_page.about_us_page.our_inspiration_description_1"
+            )}
           </CustomLabel>
         </div>
         <div className="w-full relative mt-5 pl-4">
           <CustomLabel className="mt-5 text-md font-normal text-foreground-primary font-sans z-10">
-            Today, Gateway Group of Companies is defining new paradigms of
-            technological excellence in every sector we are represented and our
-            Organization acknowledges this ‘can do’ ethos and the urge ‘to
-            excel’ to ‘always in our heart’, Prof. M.S. Pillai.
+            {t(
+              "unauthenticated_page.about_us_page.our_inspiration_description_2"
+            )}
           </CustomLabel>
         </div>
         <div className="w-full relative mt-5 pl-4">
           <CustomLabel className="mt-5 text-md font-normal text-foreground-primary font-sans z-10">
-            A lion’s share of our success as an organization is inspired by his
-            teachings. Our organizational DNA is derived largely from the
-            all-inclusive management principles that he propagated while
-            ensuring a triple-bottom line criteria to balance people, planet &
-            profits.
+            {t(
+              "unauthenticated_page.about_us_page.our_inspiration_description_3"
+            )}
           </CustomLabel>
         </div>
         <div className="w-full flex flex-col items-end justify-end relative mt-5 pl-4">
           <CustomLabel className="mt-5 text-xl font-bold font-handwritten text-foreground-primary font-sans z-10">
-            Rajat Verma
+            {t("unauthenticated_page.about_us_page.founder_name")}
           </CustomLabel>
           <CustomLabel className="text-md font-normal text-foreground-primary font-sans z-10">
-            Founder & Chairman of Board, Group CEO
+            {t("unauthenticated_page.about_us_page.founder_post")}
           </CustomLabel>
         </div>
       </div>

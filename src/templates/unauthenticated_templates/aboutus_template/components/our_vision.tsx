@@ -1,22 +1,21 @@
 import React from "react";
 import CustomLabel from "../../../../components/custom_label/component";
+import { useTranslation } from "../../../../react-intl/useTranslation";
 
 const OurVision = () => {
+  const { t } = useTranslation();
   return (
     <div className="w-full flex flex-col items-start justify-start gap-4">
       <div className="w-full overflow-hidden">
         <CustomLabel className="max-w-7xl mx-auto text-xl md:text-4xl font-bold text-foreground-primary font-sans z-10">
           <span className="text-foreground-secondary bg-background-secondary p-2 rounded-tr-lg">
-            O
+            {t("unauthenticated_page.about_us_page.our_vision_title")[0]}
           </span>
-          ur Vision
+          {t("unauthenticated_page.about_us_page.our_vision_title").slice(1)}
         </CustomLabel>
       </div>
       <CustomLabel className="text-md font-normal text-foreground-primary font-sans z-10">
-        Consistently deliver ingenious, comprehensive, efficient, cost-effective
-        business solutions through IT for the global market by creating a
-        professionally stimulating and happy environment for our team where
-        professionals thrive alongside the growth of our company.
+        {t("unauthenticated_page.about_us_page.our_vision_Description")}
       </CustomLabel>
     </div>
   );
