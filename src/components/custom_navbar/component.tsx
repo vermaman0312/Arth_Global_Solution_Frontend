@@ -30,63 +30,63 @@ const navItems = [
   },
   {
     name: "headers.leadership",
-    link: "#",
+    link: "/public/leadership",
   },
   {
     name: "headers.career",
-    link: "#",
+    link: "/public/career",
   },
   {
     name: "headers.manage_grow.title",
-    link: "#",
+    link: "/public/manage-grow",
     items: [
       {
         name: "headers.manage_grow.our_works",
-        link: "#",
+        link: "/public/manage-grow/our-works",
       },
       {
         name: "headers.manage_grow.funding",
-        link: "#",
+        link: "/public/manage-grow/funding",
       },
       {
         name: "headers.manage_grow.laws",
-        link: "#",
+        link: "/public/manage-grow/laws",
       },
       {
         name: "headers.manage_grow.news",
-        link: "#",
+        link: "/public/manage-grow/news",
       },
       {
         name: "headers.manage_grow.our_services",
-        link: "#",
+        link: "/public/manage-grow/our-services",
       },
     ],
   },
   {
     name: "headers.it_digital.title",
-    link: "#",
+    link: "/public/it-digital",
     items: [
       {
         name: "headers.it_digital.our_services",
-        link: "#",
+        link: "/public/it-digital/our-services",
       },
       {
         name: "headers.it_digital.our_products",
-        link: "#",
+        link: "/public/it-digital/our-products",
       },
       {
         name: "headers.it_digital.spotlight",
-        link: "#",
+        link: "/public/it-digital/spotlight",
       },
     ],
   },
   {
     name: "headers.blogs",
-    link: "#",
+    link: "/public/blogs",
   },
   {
     name: "headers.contact_us",
-    link: "#",
+    link: "/public/contact-us",
   },
 ];
 
@@ -123,13 +123,21 @@ export function CustomNavbar({ ...props }: props) {
             {navItems.map((item, idx) => (
               <>
                 {item.items && item.items?.length > 0 ? (
-                  <CustomCollapsible title={t(item.name)} items={item.items} URL={item.link} />
+                  <CustomCollapsible
+                    title={t(item.name)}
+                    items={item.items}
+                    URL={item.link}
+                  />
                 ) : (
                   <a
                     key={`mobile-link-${idx}`}
                     href={item.link}
                     onClick={() => setIsMobileMenuOpen(false)}
-                    className={`relative text-foreground-secondary w-full px-4 p-1 rounded-full ${url === item.link.split("/public/")[1] ? "bg-gray-400" : ""}`}
+                    className={`relative text-foreground-secondary w-full px-4 p-1 rounded-full ${
+                      url === item.link.split("/public/")[1]
+                        ? "bg-gray-400"
+                        : ""
+                    }`}
                   >
                     <span className="block">{t(item.name)}</span>
                   </a>
