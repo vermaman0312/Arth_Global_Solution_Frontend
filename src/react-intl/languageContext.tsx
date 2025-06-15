@@ -3,6 +3,7 @@ import { createContext, useState, useMemo, useEffect } from "react";
 
 import enGB from "../locales/en-GB.json";
 import hiIN from "../locales/hi-IN.json";
+import { getCookie, setCookie } from "../utils/cookie.util";
 
 // Define the shape of the translation object
 interface Translations {
@@ -41,6 +42,17 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
   const [loading, setLoading] = useState<boolean>(false);
 
   useEffect(() => {
+    const langFromCookie = getCookie("language");
+
+    if (langFromCookie && AVAILABLE_LANGUAGES.includes(langFromCookie)) {
+      setLanguage(langFromCookie);
+    } else {
+      setCookie("language", DEFAULT_LANGUAGE, { expires: 7 });
+      setLanguage(DEFAULT_LANGUAGE);
+    }
+  }, []);
+
+  useEffect(() => {
     const loadTranslations = () => {
       setLoading(true);
       const langToLoad = AVAILABLE_LANGUAGES.includes(language)
@@ -48,6 +60,7 @@ export function LanguageProvider({ children }: { children: ReactNode }) {
         : DEFAULT_LANGUAGE;
       const data = TRANSLATIONS[langToLoad];
       setTranslations(data);
+      setCookie("language", langToLoad, { expires: 7 });
       setLoading(false);
     };
 
